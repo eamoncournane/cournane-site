@@ -19,7 +19,25 @@ body {
   background: var(--first-color);
   color: var(--fourth-color);
 }
+  
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 90px;
 
+  background-image: url("woodgrain.png");
+  background-repeat: repeat-y;
+  background-size: auto 300px;
+
+  z-index: -1;
+}
+
+body::before { left: 0; }
+body::after  { right: 0; }
+  
 header {
   padding: 20px;
   text-align: center;
